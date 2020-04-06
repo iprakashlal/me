@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portfolio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+            transition: 0.5s;
+        }
+
+        .skyZoneImg {
+            background-image: url('sky-hero.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .page-header {
+            height: 100vh;
+            min-height: 100vh;
+            max-height: 999px;
+            padding: 0;
+            color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skyZone {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            z-index: -2;
+        }
+
+        .cityZone {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 25%;
+            z-index: 2;
+        }
+
+        .nameZone {
+            position: relative;
+        }
+
+        .cityZoneImg {
+            background-image: url('city-hero.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            width: 100%;
+            height: 100%;
+            top: 25%;
+        }
+
+        .nameZone {
+            position: relative;
+            font-family: Verdana;
+            font-size: 9em;
+            margin: 15% auto;
+            width: max-content;
+            z-index: -1;
+            text-align: center;
+            transition: 1s;
+            background: linear-gradient(to bottom, #FFFFFF 35%, #c38775 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-item p {
+            margin: 0;
+        }
+
+        .navbar {
+            /* box-shadow: 0px 1px 5px #888888; */
+            padding: 10px;
+            transition: 0.5s;
+        }
+
+        .navbarColor {
+            background: #b4acc9;
+            transition: 0.5s;
+            /* transform: translate3d(0px, 40px, 0px); */
+        }
+
+        .navbar-brand {
+            color: #000;
+        }
+
+        .navbar-translate {
+            width: 50%;
+        }
+
+        .pictureZone {
+            position: absolute;
+            width: 100%;
+            bottom: 150px;
+            z-index: 1040;
+            pointer-events: none;
+        }
+
+        .imageHolder {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border-radius: 150px;
+            background: #000;
+            transition: 0.5s;
+            background-image: url(https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/p960x960/67899516_2574972325848519_3885329571758735360_o.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_oc=AQlnnwyan7MrYj6mqmN2lgd2I6y8cUD0q8WF5ex07bKQvVKe77KEk7OHej-BPZLKcnU&_nc_ht=scontent-sin6-1.xx&_nc_tp=6&oh=5f605a94bfc12266d3dcc35f52644bc2&oe=5EAEBCB1);
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 70px #000;
+        }
+
+        .pictureLocate {
+            transition: 0.5s;
+            position: fixed;
+            top: 0px;
+        }
+
+        .pictureLocate .imageHolder {
+            transition: 0.5s;
+            height: 120px;
+            width: 120px;
+            box-shadow: none;
+            filter: grayscale(1);
+        }
+
+        .section {
+            padding: 200px 0px 0px 0px;
+            overflow: hidden;
+        }
+
+        .projectSection {
+            background: linear-gradient(180deg, #01070b, #162d5d);
+        }
+
+        .projectSection h1,
+        .projectSection h2,
+        .projectSection h5,
+        .projectSection small,
+        .projectSection p {
+            color: #fff !important;
+        }
+
+        small.description {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        .projectCard {
+            width: 300px;
+            height: 500px;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 10px -10px 10px #00000024;
+            background: #fbfbfb;
+            transform: rotateY(-45deg);
+        }
+
+        .cardStack {
+            position: relative;
+            max-width: 12% !important;
+            perspective: 900px;
+            transform: translate(0px, 160px);
+            padding: 0px 85px;
+        }
+
+        .projectZone {
+            padding: 80px 0px 0px 0px;
+            width: 55%;
+            margin: 0 auto;
+        }
+
+        .projectZone>.cardStack:nth-child(1) {
+            z-index: 4;
+        }
+
+        .projectZone>.cardStack:nth-child(2) {
+            z-index: 3;
+        }
+
+        .projectZone>.cardStack:nth-child(3) {
+            z-index: 2;
+        }
+
+        .projectZone>.cardStack:nth-child(4) {
+            z-index: 1;
+        }
+
+        .cardStack:hover {
+            transform: translate(0px, 50px);
+            z-index: 10 !important;
+        }
+
+        .cardStack:hover .projectCard {
+            transform: rotateX(0deg);
+            box-shadow: 0px 0px 8px #00000024;
+            cursor: pointer;
+        }
+
+        .cardDescription {
+            transform: translate(0px, -80px) !important;
+            z-index: 10 !important;
+            cursor: pointer;
+        }
+
+        .cardDescription .projectCard {
+            transform: rotateX(0deg) !important;
+            box-shadow: 0px 0px 8px #00000024 !important;
+            width: 880px;
+        }
+
+        .closeIcon {
+            pointer-events: none;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 25px;
+            width: 25px;
+            cursor: pointer;
+        }
+
+        .contactSection {
+            background: linear-gradient(180deg, #8071aa, #ccabc5);
+        }
+
+        .cardSection {
+            margin: 0 auto;
+            max-width: 600px;
+            height: 350px;
+        }
+    </style>
+</head>
+
+<body onscroll="navbarColor()">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="#">
+                    NIKHIL KAMATH
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <p>Projects</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <p>Contact</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="page-header clear-filter" id="heroSection">
+            <div class="skyZone">
+                <div class="skyZoneImg">
+
+                </div>
+            </div>
+            <div class="cityZone">
+                <div class="cityZoneImg">
+
+                </div>
+            </div>
+            <div class="nameZone" id="titleName">NIKHIL KAMATH</div>
+            <div class="pictureZone" id="profilePic">
+                <div class="imageHolder">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section projectSection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center title">
+                        My projects
+                        <br>
+                        <small class="description">
+                            Explore them...
+                        </small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row projectZone">
+                <div class="col-lg-3 cardStack" id="pickCard1" onclick="pickCard(this.id);">
+                    <div class="projectCard"></div>
+                </div>
+                <div class="col-lg-3 cardStack" id="pickCard2" onclick="pickCard(this.id);">
+                    <div class="projectCard"></div>
+                </div>
+                <div class="col-lg-3 cardStack" id="pickCard3" onclick="pickCard(this.id);">
+                    <div class="projectCard"></div>
+                </div>
+                <div class="col-lg-3 cardStack" id="pickCard4" onclick="pickCard(this.id);">
+                    <div class="projectCard"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="section skillSection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center title">
+                        My skills
+                        <br>
+                        <small class="description">
+                            My fundamentals.
+                        </small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="padding: 200px 0; text-align: center;">
+                    Form comes here
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="section contactSection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center title">
+                        Contact me
+                        <br>
+                        <small class="description">
+                            Know me more...
+                        </small>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container" style="padding: 200px 0; text-align: center;">
+                    <div class="card cardSection">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function navbarColor() {
+        $(window).scroll(function() {
+            // console.log($(this).scrollTop());
+            var scrollCount = $(this).scrollTop() + 1;
+            if ($(this).scrollTop() > 670) {
+                document.getElementById('navbar').classList.add('navbarColor');
+                document.getElementById('profilePic').classList.add('pictureLocate');
+            } else {
+                document.getElementById('navbar').classList.remove('navbarColor');
+                document.getElementById('profilePic').classList.remove('pictureLocate');
+            }
+            document.getElementById('titleName').style.transform = "translate3d(0px, " + scrollCount +
+                "px, 0px)";
+        });
+    }
+
+    function pickCard(id) {
+        document.getElementById(id).classList.add('cardDescription');
+        document.getElementById(id).setAttribute('onclick', 'closeCard(this.id)');
+        document.getElementById(id).children[0].innerHTML =
+            '<span class="closeIcon" style="position:absolute;right:10px;top:10px;font-size: 25px;width: 25px;cursor:pointer;" onclick="closeCard(\'' +
+            id + '\');">x</span>';
+    }
+
+    function closeCard(id) {
+        document.getElementById(id).classList.remove('cardDescription');
+        document.getElementById(id).setAttribute("onclick", "pickCard(this.id)");
+        document.getElementById(id).children[0].innerHTML = "";
+    }
+</script>
+
+</html>
