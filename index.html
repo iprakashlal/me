@@ -113,6 +113,7 @@
         .navbar {
             padding: 10px;
             transition: 0.5s;
+            pointer-events: none;
         }
 
         .navbarUpdate {
@@ -334,7 +335,7 @@
         .contactSection .container-fluid,
         .skillSection .container-fluid,
         .projectSection .container-fluid {
-            background: linear-gradient(180deg, #0d5ad0, #0D47A1);
+            background: linear-gradient(180deg, #a8b1b5, #90a4aedb), url(tabBG.png);
             height: 100%;
             border-radius: 20px 20px 0 0;
             overflow: overlay;
@@ -433,7 +434,7 @@
         .fileVisible.projectSection::before,
         .fileVisible.skillSection::before,
         .fileVisible.contactSection::before {
-            background: #0d5ad0;
+            background: #a8b1b5;
             color: #fff;
             font-weight: lighter;
         }
@@ -522,6 +523,7 @@
             top: 0;
             /* margin: 2.5% auto; */
             height: 150px;
+            pointer-events: none;
         }
 
         .activeNav {
@@ -537,6 +539,7 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
+            pointer-events: all!important;
         }
 
         .activeNavZone h5 {
