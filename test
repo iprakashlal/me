@@ -1,0 +1,82 @@
+<style>
+    .customFullWidthAll {
+        width: 100%;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        box-shadow: 1px 1px 7px #d6d6d6;
+        background-color: #B2DFDB;
+    }
+    .customFullWidthAll h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .HeaderSection {
+        display: flex!important;
+    align-items: center;
+    }
+    .customFullWidthAll a:visited {
+        color: #0076a8;
+    }
+
+    .customFullWidthAll a {
+        color: #0076a8;
+    }
+
+
+    .customFullWidth {
+        width: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+
+    .customFullWidthAll div {
+        box-sizing: border-box;
+    }
+
+    .customHalfWidth {
+        width: 45%;
+        float: left;
+    }
+
+    .customFirmWidth {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: block;
+    }
+    .customLogoSection {
+        width: auto;
+        float: left;
+    }
+
+    .customLogoSection img {
+        width:70px;
+    }
+    .contentZone {
+        padding: 0 10px;
+    }
+
+   
+</style>
+
+<div class="customFullWidthAll">
+    <div class="customFullWidth HeaderSection">
+        <div class="customLogoSection">
+        <img src="https://dcassetcdn.com/design_img/1559024/551167/551167_7840631_1559024_911ff84c_image.png">
+        </div>
+        <div class="customHalfWidth">
+            <div class="customFullWidth contentZone">
+                   <h2> Your text | Your text </h2>
+            </div>
+        </div>
+        <!-- <div class="customHalfWidth">
+            <div class="customFullWidth contentZone">
+                  <h1> Your text 2</h1>
+            </div>
+        </div> -->
+    </div>
+</div>
