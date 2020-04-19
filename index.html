@@ -18,6 +18,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/675dda4c19.js" crossorigin="anonymous"></script>
+    <script src="content.js"></script>
     <!--[if lt IE 9]>
                          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                         <![endif]-->
@@ -539,7 +540,7 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            pointer-events: all!important;
+            pointer-events: all !important;
         }
 
         .activeNavZone h5 {
@@ -1041,18 +1042,45 @@
                 width: 75px;
             }
         }
+
+        .loader {
+            position: fixed;
+            z-index: 16999;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hideLoad {
+            animation: loads 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes loads {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
     </style>
 </head>
-
 <body id="masterID" class="">
+    <div class="loader">Loading...</div>
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" id="navbar">
         <div class="container-fluid">
             <div class="profileBioSection">
                 <div class="bioZone">
                     <p>Digital
-experience in Web Development, and an innate ability to change the experience of any web portal. My
-programming skills and love for the digital world has shaped me into a developer par excellence who can
-reach the user's expectation using web. </p>
+                        experience in Web Development, and an innate ability to change the experience of any web portal.
+                        My
+                        programming skills and love for the digital world has shaped me into a developer par excellence
+                        who can
+                        reach the user's expectation using web. </p>
                 </div>
             </div>
             <div class="pictureZone" id="profilePic">
@@ -1180,6 +1208,8 @@ reach the user's expectation using web. </p>
 </body>
 
 <script type="text/javascript">
+
+
     document.getElementById('socialContentB').innerHTML = document.getElementById('socialContentA').innerHTML;
     var flag = "1";
     var lastID;
@@ -1220,85 +1250,11 @@ reach the user's expectation using web. </p>
             }, 1000);
         }
     }
-    var projectInputs = [{
-            label: 'Cura',
-            keyTechs: '<ul><li>PHP, file system</li><li>MySQL</li><li>HTML, CSS</li></ul>',
-            techSkills: '<ul><li>Data table</li><li>Server management</li></ul>',
-            description: 'Our objective was to handle the vigorous management of profiles being registered to an entity',
-            projectLink: "#soon",
-            ctaButton: 'Visit the project',
-            idContainer: 'projectContentZone'
-        },{
-            label: 'Attendance recorder',
-            keyTechs: '<ul><li>PHP</li><li>MySQL</li><li>Bootstrap framework</li><li>HTML, CSS</li></ul>',
-            techSkills: '<ul><li>Data table</li></li>MVC framework<li></ul>',
-            description: 'Our objective was to handle the vigorous management of profiles being registered to an entity',
-            projectLink: "#soon",
-            ctaButton: 'Visit the project',
-        }
-    ]
+    
     blockTiles(projectInputs);
-    var skillInputs = [{
-            score: '95',
-            label: 'HTML',
-            idContainer: 'skillContentZone'
-        },
-        {
-            score: '90',
-            label: 'CSS'
-        },
-        {
-            score: '75',
-            label: 'Vanilla Javascript'
-        },
-        {
-            score: '70',
-            label: 'OOPS concept'
-        }, {
-            score: '75',
-            label: 'Analytics'
-        }
-    ]
+    
     blockTiles(skillInputs);
-    var subSkillInputs = [{
-            score: '75',
-            label: 'Adobe creative cloud',
-            idContainer: 'subSkillContentZone'
-        },
-        {
-            score: '70',
-            label: 'Strategy and logic'
-        },
-        {
-            score: '75',
-            label: 'Cvent'
-        },
-        {
-            score: '50',
-            label: 'Google Analytics'
-        }, {
-            score: '70',
-            label: 'AEM UI management'
-        }, {
-            score: '80',
-            label: 'Web analysis'
-        }, {
-            score: '75',
-            label: 'GIT'
-        },{
-            score: '60',
-            label: 'Meteor JS'
-        }, {
-            score: '75',
-            label: 'Project Management'
-        }, {
-            score: '75',
-            label: 'Agile Development'
-        }, {
-            score: '70',
-            label: 'CMS Development'
-        }
-    ]
+    
     blockTiles(subSkillInputs);
 
     function blockTiles(contentSource) {
@@ -1353,6 +1309,11 @@ reach the user's expectation using web. </p>
             document.getElementById('overlayBlur').style.display = "none";
         }, 300)
     }
+
+    window.addEventListener("load", function() {
+        var loader = document.querySelector('.loader');
+        loader.classList += " hideLoad";
+    })
 </script>
 
 </html>
