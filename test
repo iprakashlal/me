@@ -1,82 +1,93 @@
-<style>
-    .customFullWidthAll {
-        width: 100%;
-        box-sizing: border-box;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 70px;
-        box-shadow: 1px 1px 7px #d6d6d6;
-        background-color: #B2DFDB;
-    }
-    .customFullWidthAll h1 {
-        margin: 0;
-        padding: 0;
-    }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+<script src="https://www.youtube.com/iframe_api"></script>
+    <style>
+        .divTest {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: #fff;
+            z-index: 169999;
+            display: none;
+        }
+    </style>
 
-    .HeaderSection {
-        display: flex!important;
-    align-items: center;
-    }
-    .customFullWidthAll a:visited {
-        color: #0076a8;
-    }
+</head>
+<body>
+    <div class="divTest"><button id="play">Play</button><button id="pause">Pause</button>
+    <h1>Hi Hisham</h1>
+    </div>
 
-    .customFullWidthAll a {
-        color: #0076a8;
-    }
-
-
-    .customFullWidth {
-        width: 100%;
-        box-sizing: border-box;
-        display: inline-block;
-    }
-
-    .customFullWidthAll div {
-        box-sizing: border-box;
-    }
-
-    .customHalfWidth {
-        width: 45%;
-        float: left;
-    }
-
-    .customFirmWidth {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: block;
-    }
-    .customLogoSection {
-        width: auto;
-        float: left;
-    }
-
-    .customLogoSection img {
-        width:70px;
-    }
-    .contentZone {
-        padding: 0 10px;
-    }
+    <div id="video-placeholder"></div>
 
    
-</style>
+</body> 
+<script>
+var player,
+time_update_interval = 0;
 
-<div class="customFullWidthAll">
-    <div class="customFullWidth HeaderSection">
-        <div class="customLogoSection">
-        <img src="https://dcassetcdn.com/design_img/1559024/551167/551167_7840631_1559024_911ff84c_image.png">
-        </div>
-        <div class="customHalfWidth">
-            <div class="customFullWidth contentZone">
-                   <h2> Your text | Your text </h2>
-            </div>
-        </div>
-        <!-- <div class="customHalfWidth">
-            <div class="customFullWidth contentZone">
-                  <h1> Your text 2</h1>
-            </div>
-        </div> -->
-    </div>
-</div>
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video-placeholder', {
+            width: 600,
+            height: 400,
+            videoId: 'Xa0Q0J5tOP0',
+            events: {
+                onReady: initialize
+            }
+        });
+    }
+function initialize(){
+    updateTimerDisplay();
+    clearInterval(time_update_interval);
+
+    time_update_interval = setInterval(function () {
+        updateTimerDisplay();
+    }, 1000);
+
+}
+
+
+function updateTimerDisplay(){
+    var ct =formatTime(player.getCurrentTime());
+    var td= formatTime(player.getDuration());
+    console.log(ct+" / "+td);
+
+    if (ct == "2:40") {
+        document.querySelector('.divTest').style.display = "block";
+        player.pauseVideo();
+    }
+}
+
+
+$('#play').on('click', function () {
+    player.playVideo();
+});
+
+
+$('#pause').on('click', function () {
+    player.pauseVideo();
+});
+
+
+
+function formatTime(time){
+    time = Math.round(time);
+
+    var minutes = Math.floor(time / 60),
+        seconds = time - minutes * 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    return minutes + ":" + seconds;
+}
+
+
+
+</script>
+</html>
