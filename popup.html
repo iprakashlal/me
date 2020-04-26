@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+    <style>
+        .divTest {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: #fff;
+            z-index: 2147483647;
+            display: none;
+        }
+        #video-placeholder {
+            z-index: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="divTest"><button id="play">Play</button><button id="pause">Pause</button>
+    <h1>Hi Hisham</h1>
+    <a href="https://www.google.com" target="_blank">Check this site</a>
+    </div>
+
+    <div id="video-placeholder"></div>
+
+   
+</body> 
+<script>
+var player,
+time_update_interval = 0;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video-placeholder', {
+            width: 600,
+            height: 400,
+            videoId: 'Xa0Q0J5tOP0',
+            events: {
+                onReady: initialize
+            }
+        });
+    }
+function initialize(){
+    updateTimerDisplay();
+    clearInterval(time_update_interval);
+
+    time_update_interval = setInterval(function () {
+        updateTimerDisplay();
+    }, 1000);
+
+}
+
+
+function updateTimerDisplay(){
+    var ct =formatTime(player.getCurrentTime());
+    var td= formatTime(player.getDuration());
+    console.log(ct+" / "+td);
+
+    if (ct == "0:02") {
+        document.querySelector('.divTest').style.display = "block";
+        player.pauseVideo();
+    }
+}
+
+
+$('#play').on('click', function () {
+    player.playVideo();
+});
+
+
+$('#pause').on('click', function () {
+    player.pauseVideo();
+});
+
+
+
+function formatTime(time){
+    time = Math.round(time);
+
+    var minutes = Math.floor(time / 60),
+        seconds = time - minutes * 60;
+
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    return minutes + ":" + seconds;
+}
+
+
+
+</script>
+</html>
