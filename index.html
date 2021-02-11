@@ -1278,8 +1278,19 @@
 </body>
 <script type="text/javascript">
 commentBox('5650207056330752-proj');
-function launchPrakashComment() {
+var commentBoxVar= 'close';
+    function launchPrakashComment() {
+    if (commentBoxVar=='close') {
 document.querySelector('.commentbox').classList.add('launchCommentPrakash');
+        document.querySelector('.commentbox').innerText="Back";
+              document.querySelector('.commentbox').style.right="320px";
+    commentBoxVar= 'open';
+    } else if (commentBoxVar=='open') {
+        document.querySelector('.commentbox').classList.remove('launchCommentPrakash');
+        document.querySelector('.commentbox').innerText="Comment";
+              document.querySelector('.commentbox').style.right="10px";
+        commentBoxVar= 'close';
+    }
 }
     document.getElementById('socialContentB').innerHTML = document.getElementById('socialContentA').innerHTML;
     var flag = "1";
