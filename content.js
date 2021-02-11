@@ -39,7 +39,7 @@ var projectInputs = [{
     label: 'Comming Soon!',
     keyTechs: '<p>This is in process, please keep smiling!</p>',
     techSkills: '',
-    description: 'Please keep patience more technologies yet to be listed. Keep smiling!',
+    description: 'Please keep patience more technologies yet to be listed. I\'m trying my best!',
     projectLink: "#soon",
     ctaButton: 'Life is compiling it...',
 }]
