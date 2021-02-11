@@ -8,9 +8,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="keywords" content="prakash, lal, web developer, prakash lal, ui, UI, UX, javascript">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -29,38 +29,39 @@
                          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                         <![endif]-->
     <style>
-        
-/*custom-comment-box*/
+        /*custom-comment-box*/
         .calloutComment {
-    position: fixed;
-    bottom: 10px;
-    right:10px;
-    font-weight: normal;
-    padding: 20px 20px 20px 80px;
-    background-color: white;
-    border-radius: 50px;
-    font-size: larger;
-    background-image: url('https://raw.githubusercontent.com/iprakashlal/me/master/animated-comment-icon.gif');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
-            z-index:2;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-weight: normal;
+            padding: 20px 20px 20px 80px;
+            background-color: white;
+            border-radius: 50px;
+            font-size: larger;
+            background-image: url('https://raw.githubusercontent.com/iprakashlal/me/master/animated-comment-icon.gif');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+            z-index: 2;
             cursor: pointer;
         }
+
         .commentbox {
             position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: #fff;
-    z-index: 1699999;
-    transform: translate(310px, 470px);
-            transition:1s;
+            bottom: 10px;
+            right: 10px;
+            background: #fff;
+            z-index: 1699999;
+            transform: translate(310px, 470px);
+            transition: 1s;
         }
-        
+
         .launchCommentPrakash {
             transform: translate(0px, 0px);
-            transition:1s;
+            transition: 1s;
         }
+
         @font-face {
             font-family: Quicksand;
             src: url('quicksand.ttf');
@@ -165,7 +166,7 @@
             letter-spacing: 0.5px;
             color: #000;
             font-weight: 300;
-            font-family: 'Permanent Marker', cursive!important;
+            font-family: 'Permanent Marker', cursive !important;
         }
 
         a.navbar-brand:hover {
@@ -1272,26 +1273,26 @@
             <div class="nameZone" id="titleName">PRAKASH LAL</div>
         </div>
         <div class="calloutComment" onclick="launchPrakashComment();">Comment</div>
-    <div class="commentbox"></div>
+        <div class="commentbox"></div>
     </div>
 
 </body>
 <script type="text/javascript">
-commentBox('5650207056330752-proj');
-var commentBoxVar= 'close';
+    commentBox('5650207056330752-proj');
+    var commentBoxVar = 'close';
     function launchPrakashComment() {
-    if (commentBoxVar=='close') {
-document.querySelector('.commentbox').classList.add('launchCommentPrakash');
-        document.querySelector('.commentbox').innerText="Back";
-              document.querySelector('.commentbox').style.right="320px";
-    commentBoxVar= 'open';
-    } else if (commentBoxVar=='open') {
-        document.querySelector('.commentbox').classList.remove('launchCommentPrakash');
-        document.querySelector('.commentbox').innerText="Comment";
-              document.querySelector('.commentbox').style.right="10px";
-        commentBoxVar= 'close';
+        if (commentBoxVar == 'close') {
+            document.querySelector('.commentbox').classList.add('launchCommentPrakash');
+            document.querySelector('.calloutComment').innerText = "Back";
+            document.querySelector('.calloutComment').style.right = "320px";
+            commentBoxVar = 'open';
+        } else if (commentBoxVar == 'open') {
+            document.querySelector('.commentbox').classList.remove('launchCommentPrakash');
+            document.querySelector('.calloutComment').innerText = "Comment";
+            document.querySelector('.calloutComment').style.right = "10px";
+            commentBoxVar = 'close';
+        }
     }
-}
     document.getElementById('socialContentB').innerHTML = document.getElementById('socialContentA').innerHTML;
     var flag = "1";
     var lastID;
