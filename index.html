@@ -807,7 +807,18 @@
             margin: 0 auto;
             left: 0;
             right: 0;
+            animation: welcome 3s;
         }
+        
+        @keyframes welcome {
+        from {
+transform:translateY(-250px);            
+}
+  to {
+      transform:translateY(0px);
+            }
+        }       
+        
 
         @media (max-width:1200px) and (min-width: 768px) {
             .nameZone {
