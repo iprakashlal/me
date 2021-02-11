@@ -35,6 +35,13 @@ var projectInputs = [{
     description: 'My objective was to handle the core frontend developement on banking & medical sector applications',
     projectLink: "#soon",
     ctaButton: 'Comming soon on approval',
+}, {
+    label: 'Comming Soon!',
+    keyTechs: '<p>This is in process, please keep smiling!</p>',
+    techSkills: '',
+    description: 'Please keep patience more technologies yet to be listed. Keep smiling!',
+    projectLink: "#soon",
+    ctaButton: 'Life is compiling it...',
 }]
 
 
