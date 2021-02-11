@@ -55,6 +55,8 @@
             z-index: 1699999;
             transform: translate(310px, 470px);
             transition: 1s;
+            border-radius: 25px;
+    box-shadow: 0px 0px 10px #000;
         }
 
         .launchCommentPrakash {
@@ -1284,11 +1286,13 @@
     function launchPrakashComment() {
         if (commentBoxVar == 'close') {
             document.querySelector('.commentbox').classList.add('launchCommentPrakash');
+            document.querySelector('.heroSection').style.filter = "greyscale(100%)";
             document.querySelector('.calloutComment').innerText = "Back";
             document.querySelector('.calloutComment').style.right = "320px";
             commentBoxVar = 'open';
         } else if (commentBoxVar == 'open') {
             document.querySelector('.commentbox').classList.remove('launchCommentPrakash');
+            document.querySelector('.heroSection').style.filter = "greyscale(0%)";
             document.querySelector('.calloutComment').innerText = "Comment";
             document.querySelector('.calloutComment').style.right = "10px";
             commentBoxVar = 'close';
