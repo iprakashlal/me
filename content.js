@@ -57,6 +57,9 @@ var skillInputs = [{
 }, {
     score: '75',
     label: 'Analytics'
+}, {
+    score: '80',
+    label: 'Java scripting - core UI'
 }
 ]
 
@@ -96,6 +99,6 @@ var subSkillInputs = [{
     label: 'Agile Development'
 }, {
     score: '70',
-    label: 'CMS Development'
+    label: 'CMS Development & programming'
 }
 ]
