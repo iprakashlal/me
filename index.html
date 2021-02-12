@@ -1400,12 +1400,23 @@
             selection.setAttribute("onclick", "expandCard(this.id)");
             document.getElementById('overlayBlur').style.display = "none";
         }, 300)
-    }
+    };
 
     window.addEventListener("load", function () {
         var loader = document.querySelector('.loader');
         loader.classList += " hideLoad";
-    })
+    });
+    
+//     motion-effect
+    function motionEffect(e) {
+  var a = e.clientX;
+  var b = e.clientY;
+  document.getElementById("profilePic").style.transform = 'translate('+a+','+b+')'
+}
+
+function clearCoor() {
+  document.getElementById("profilePic").style.transform = "translate(0px,0px)";
+}
 </script>
 
 </html>
