@@ -1144,7 +1144,7 @@
     </style>
 </head>
 
-<body id="masterID" class="">
+<body id="masterID" class="" onmousemove="motionEffect(event)" onmouseout="resetMotion()">
     <div class="loader">Loading...</div>
      <div class="commentbox"></div>
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" id="navbar">
@@ -1414,7 +1414,7 @@
   document.getElementById("profilePic").style.transform = 'translate('+a+','+b+')'
 }
 
-function clearCoor() {
+function resetMotion() {
   document.getElementById("profilePic").style.transform = "translate(0px,0px)";
 }
 </script>
