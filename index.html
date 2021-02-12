@@ -1412,6 +1412,7 @@
   var a = (e.clientX)/25;
   var b = (e.clientY)/25;
   document.getElementById("profilePic").style.transform = 'translate('+a+'px,'+b+'px)';
+        document.querySelector(".cityZoneImg").style.backgroundPosition = '-'+a+'px -'+b+'px';
 }
 
 function resetMotion() {
