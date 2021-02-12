@@ -828,7 +828,7 @@
         .bioZone {
             max-width: 800px;
             margin: 0 auto;
-            background: #ffffff;
+            background: rgb(0 130 141 / 90%);
             padding: 20px;
             border-radius: 10px;
         }
@@ -843,16 +843,18 @@
         .navbarUpdate .profileBioSection {
             transform: scale3d(0, 0, 0)
         }
-
+        .navbarUpdate .profileBioSection p {
+        color:#fff!important;
+        }
         .profileBioSection::after {
             content: "";
             width: 0;
             height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-top: 20px solid #ffffff;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid rgb(0 130 141 / 90%);
             position: absolute;
-            bottom: -13px;
+            bottom: -10px;
             margin: 0 auto;
             left: 0;
             right: 0;
