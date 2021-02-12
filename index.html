@@ -1409,8 +1409,8 @@
     
 //     motion-effect
     function motionEffect(e) {
-  var a = e.clientX;
-  var b = e.clientY;
+  var a = (e.clientX)/100;
+  var b = (e.clientY)/100;
   document.getElementById("profilePic").style.transform = 'translate('+a+'px,'+b+'px)'
 }
 
