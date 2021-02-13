@@ -4,7 +4,7 @@ var projectInputs = [{
     techSkills: '<ul><li>Web framework</li><li>ASP.net</li><li>HTML/CSS/Jquery</li></ul>',
     description: 'Our objective was to handle the vigorous management of profiles being registered to an entity',
     projectLink: "#soon",
-    ctaButton: 'Coming soon on approval',
+    ctaButton: 'Coming soon',
     idContainer: 'projectContentZone'
 },{
     "label": 'Cura',
