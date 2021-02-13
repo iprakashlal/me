@@ -27,14 +27,14 @@ var projectInputs = [{
     techSkills: '<ul><li>E-commerce</li><li>payment gateways</li><li>E-commerce process flow</li><li>Google analytic management</li></ul>',
     description: 'My objective was to handle the E-commerce site & its backend/frontend engine',
     projectLink: "#soon",
-    ctaButton: 'Coming soon on approval',
+    ctaButton: 'Coming soon',
 }, {
     label: 'Mindcraft Software Pvt. Ltd.',
     keyTechs: '<ul><li>IntelliJ</li><li>ASP.net</li><li>Foundation & Boostrap framework</li><li>Meteor & Node & Angular JS</li><li>Mongo DB</li><li>Core CSS</li></ul>',
     techSkills: '<ul><li>Core frontend specialist</li><li>Frontend with JAva integration</li><li>SVN services</li></ul>',
     description: 'My objective was to handle the core frontend developement on banking & medical sector applications',
     projectLink: "#soon",
-    ctaButton: 'Coming soon on approval',
+    ctaButton: 'Coming soon',
 }, {
     label: 'Comming Soon!',
     keyTechs: '<p>This is in process, please keep smiling!</p>',
