@@ -46,66 +46,65 @@ var projectInputs = [{
 
 
 var skillInputs = [{
-    score: '95',
-    label: 'HTML',
+    score: '85',
+    label: 'Flex Box',
     idContainer: 'skillContentZone'
 },
 {
     score: '90',
-    label: 'CSS'
+    label: 'Css Box'
 },
 {
-    score: '75',
-    label: 'Vanilla Javascript'
+    score: '80',
+    label: 'HTML/Css'
 },
 {
-    score: '70',
-    label: 'OOPS concept'
+    score: '80',
+    label: 'Agile Development Method'
 }, {
     score: '75',
-    label: 'Analytics'
+    label: 'GIT/SVN'
 }, {
     score: '80',
-    label: 'Java scripting - core UI'
+    label: 'Java scripting - core UI enabled'
 }
 ]
 
-var subSkillInputs = [{
-    score: '75',
-    label: 'Adobe creative cloud',
-    idContainer: 'subSkillContentZone'
+var subSkillInputs = [
+{
+    score: '70',
+    label: 'logic programming'
 },
 {
     score: '70',
-    label: 'Strategy and logic'
-},
-{
-    score: '75',
-    label: 'Cvent'
-},
-{
-    score: '50',
-    label: 'Google Analytics'
-}, {
-    score: '70',
-    label: 'AEM UI management'
-}, {
-    score: '80',
-    label: 'Web analysis'
+    label: 'JS prototypal inheritance'
 }, {
     score: '75',
-    label: 'GIT'
+    label: 'Web performance analysis'
 }, {
     score: '60',
-    label: 'Meteor JS'
+    label: 'Meteor/Angular JS'
+}, {
+    score: '80',
+    label: 'Grid Layout Development'
 }, {
     score: '75',
-    label: 'Project Management'
-}, {
-    score: '75',
-    label: 'Agile Development'
+    label: 'Object oriented programming'
 }, {
     score: '70',
-    label: 'CMS Development & programming'
-}
-]
+    label: 'Analytics'
+},{
+    score: '75',
+    label: 'Adobe Photoshop/Illustrator/Animate/After Effects',
+    idContainer: 'subSkillContentZone'
+}, {
+    score: '70',
+    label: 'Content management system'
+},
+{
+    score: '75',
+    label: 'Cvent/Eloqua'
+}, {
+    score: '70',
+    label: 'AEM Frontend'
+}]
