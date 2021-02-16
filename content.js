@@ -70,38 +70,35 @@ var skillInputs = [{
 }
 ]
 
-var subSkillInputs = [
-{
+var subSkillInputs = [{
     score: '70',
     label: 'logic programming'
-},
-{
+},{
     score: '70',
     label: 'JS prototypal inheritance'
-}, {
+},{
     score: '75',
     label: 'Web performance analysis'
-}, {
+},{
     score: '60',
     label: 'Meteor/Angular JS'
-}, {
+},{
     score: '80',
     label: 'Grid Layout Development'
-}, {
+},{
     score: '75',
     label: 'Object oriented programming'
-}, {
+},{
     score: '70',
     label: 'Analytics'
 },{
     score: '75',
     label: 'Adobe Photoshop/Illustrator/Animate/After Effects',
     idContainer: 'subSkillContentZone'
-}, {
+},{
     score: '70',
     label: 'Content management system'
-},
-{
+},{
     score: '75',
     label: 'Cvent/Eloqua'
 }, {
