@@ -72,7 +72,8 @@ var skillInputs = [{
 
 var subSkillInputs = [{
     score: '70',
-    label: 'logic programming'
+    label: 'logic programming',
+     idContainer: 'subSkillContentZone'
 },{
     score: '70',
     label: 'JS prototypal inheritance'
@@ -93,8 +94,7 @@ var subSkillInputs = [{
     label: 'Analytics'
 },{
     score: '75',
-    label: 'Adobe Photoshop/Illustrator/Animate/After Effects',
-    idContainer: 'subSkillContentZone'
+    label: 'Adobe Photoshop/Illustrator/Animate/After Effects'
 },{
     score: '70',
     label: 'Content management system'
