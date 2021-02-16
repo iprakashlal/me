@@ -132,6 +132,7 @@
             width: 100%;
             height: 100%;
             top: 25%;
+            opacity:0.2;
         }
 
         .nameZone {
@@ -1439,8 +1440,8 @@
     
 //     motion-effect
     function motionEffect(e) {
-  var a = (e.clientX)/50;
-  var b = (e.clientY)/50;
+  var a = (e.clientX)/35;
+  var b = (e.clientY)/35;
   document.getElementById("profilePic").style.transform = 'translate('+a+'px,'+b+'px)';
   document.querySelector(".cityZoneImg").style.backgroundPosition = '-'+a+'px -'+b+'px';
 }
