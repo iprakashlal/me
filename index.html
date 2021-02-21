@@ -194,7 +194,7 @@
             z-index: 1040;
             /* pointer-events: none; */
             top: 60vh;
-            transition: 1s;
+            transition:all 0.5s ease;
             left: 0;
             right: 0;
             transform-style: preserve-3d;
@@ -1440,22 +1440,19 @@
     });
     
 //     motion-effect
+    var frame = document.querySelector('.heroSection');
+    var tileSlice = document.getElementById('profilePic');
     
-    
-//     function motionEffect(e) {
-//   var a = (e.clientX)/35;
-//   var b = (e.clientY)/35;
-//   document.getElementById("profilePic").style.transform = 'translate('+a+'px,'+b+'px)';
-//   document.querySelector(".cityZoneImg").style.backgroundPosition = '-'+a+'px -'+b+'px';
-// }
-document.querySelector('.heroSection').addEventListener('mousemove', e=> { 
+
+frame.addEventListener('mousemove', e=> { 
     var xAxis=((window.innerHeight/2)-e.pageX)/35; 
     var yAxis=((window.innerHeight/2)-e.pageY)/35;
-    document.getElementById('profilePic').style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;       })
-// function resetMotion() {
-//   document.getElementById("profilePic").style.transform = "translate(0px,0px)";
-//   document.querySelector(".cityZoneImg").style.backgroundPosition ='top';
-// }
+    tileSlice.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;       
+})
+frame.addEventListener('mouseleave', e=>{
+tileSlice.style.transform = `rotateX(0deg) rotateY(0deg)`;
+})
+
 </script>
 
 </html>
