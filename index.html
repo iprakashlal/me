@@ -1448,7 +1448,7 @@
 //   document.getElementById("profilePic").style.transform = 'translate('+a+'px,'+b+'px)';
 //   document.querySelector(".cityZoneImg").style.backgroundPosition = '-'+a+'px -'+b+'px';
 // }
-window.addEventListener('mousemove', e=> { 
+document.querySelector('.heroSection').addEventListener('mousemove', e=> { 
     var xAxis=((window.innerHeight/2)-e.pageX)/35; 
     var yAxis=((window.innerHeight/2)-e.pageY)/35;
     document.getElementById('profilePic').style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;       })
