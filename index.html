@@ -1439,17 +1439,20 @@
     });
     
 //     motion-effect
-    function motionEffect(e) {
-  var a = (e.clientX)/35;
-  var b = (e.clientY)/35;
-  document.getElementById("profilePic").style.transform = 'translate('+a+'px,'+b+'px)';
-  document.querySelector(".cityZoneImg").style.backgroundPosition = '-'+a+'px -'+b+'px';
-}
-
-function resetMotion() {
-  document.getElementById("profilePic").style.transform = "translate(0px,0px)";
-  document.querySelector(".cityZoneImg").style.backgroundPosition ='top';
-}
+    
+    
+//     function motionEffect(e) {
+//   var a = (e.clientX)/35;
+//   var b = (e.clientY)/35;
+//   document.getElementById("profilePic").style.transform = 'translate('+a+'px,'+b+'px)';
+//   document.querySelector(".cityZoneImg").style.backgroundPosition = '-'+a+'px -'+b+'px';
+// }
+window.addEventListener('mousemove', e=> {var xAxis=((window.innerHeight/2)-e.pageX)/15; yAxis=((window.innerHeight/2)-e.pageY)/15;
+                                document.getElementById('profilePic').style.transform = rotateX(${xAxis}deg) rotateY(${yAxis}deg);       })
+// function resetMotion() {
+//   document.getElementById("profilePic").style.transform = "translate(0px,0px)";
+//   document.querySelector(".cityZoneImg").style.backgroundPosition ='top';
+// }
 </script>
 
 </html>
