@@ -206,7 +206,7 @@
             margin: 0 auto;
             border-radius: 150px;
             background: #000;
-            transition: 0.5s;
+            transition: all 0.5s ease;
             background-image: url('prakash_lal.jpg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -1442,15 +1442,21 @@
 //     motion-effect
     var frame = document.querySelector('.heroSection');
     var tileSlice = document.getElementById('profilePic');
+    var portfolioPic = document.getElementById('imageHolder');
+     var quickInfo = document.getElementById('activeNavZone');
     
 
 frame.addEventListener('mousemove', e=> { 
     var xAxis=((window.innerHeight/2)-e.pageX)/35; 
     var yAxis=((window.innerHeight/2)-e.pageY)/35;
-    tileSlice.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;       
+    tileSlice.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;   
+    portfolioPic.style.transform=`translateZ(100px)`;
+    quickInfo.style.transform=`translateZ(15px)`;
 })
 frame.addEventListener('mouseleave', e=>{
 tileSlice.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    portfolioPic.style.transform=`translateZ(0px)`;
+    quickInfo.style.transform=`translateZ(15px)`;
 })
 
 </script>
