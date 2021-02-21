@@ -592,6 +592,7 @@
             /* margin: 2.5% auto; */
             height: 150px;
             pointer-events: none;
+            transition:all 0.5s ease;
         }
 
         .activeNav {
@@ -1442,8 +1443,8 @@
 //     motion-effect
     var frame = document.querySelector('.heroSection');
     var tileSlice = document.getElementById('profilePic');
-    var portfolioPic = document.getElementById('imageHolder');
-     var quickInfo = document.getElementById('activeNavZone');
+    var portfolioPic = document.getElementById('.imageHolder');
+     var quickInfo = document.getElementById('.activeNavZone');
     
 
 frame.addEventListener('mousemove', e=> { 
