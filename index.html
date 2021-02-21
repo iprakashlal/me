@@ -1448,7 +1448,7 @@
     
 
 frame.addEventListener('mousemove', e=> { 
-    var xAxis=((window.innerHeight/2)-e.pageX)/35; 
+    var xAxis=((window.innerWidth/2)-e.pageX)/35; 
     var yAxis=((window.innerHeight/2)-e.pageY)/35;
     tileSlice.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;   
     portfolioPic.style.transform=`translateZ(100px)`;
