@@ -197,6 +197,7 @@
             transition: 1s;
             left: 0;
             right: 0;
+            transform:preserve-3d;
         }
 
         .imageHolder {
@@ -236,6 +237,7 @@
 
         body {
             overflow: hidden;
+            perspetive:400px;
         }
 
 
@@ -1450,7 +1452,7 @@
 window.addEventListener('mousemove', e=> { 
     var xAxis=((window.innerHeight/2)-e.pageX)/25; 
     var yAxis=((window.innerHeight/2)-e.pageY)/25;
-    document.getElementById('profilePic').style.transform = `rotateX(${xAxis}deg) rotateY(${yAxis}deg)`;       })
+    document.getElementById('profilePic').style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;       })
 // function resetMotion() {
 //   document.getElementById("profilePic").style.transform = "translate(0px,0px)";
 //   document.querySelector(".cityZoneImg").style.backgroundPosition ='top';
