@@ -1461,16 +1461,23 @@ frame.addEventListener('mousemove', e=> {
     quickInfo.style.transform=`translateZ(15px)`;
 })
     
+
+frame.addEventListener('mouseleave', e=>{
+tileSlice.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    portfolioPic.style.transform=`translateZ(0px)`;
+    quickInfo.style.transform=`translateZ(0px)`;
+})
+
 cFrame.addEventListener('mousemove', e=> { 
     var xAxis=((window.innerWidth/2)-e.pageX)/40; 
     var yAxis=((window.innerHeight/2)-e.pageY)/40;
     contactInfoCard.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;   
     socialSlice.style.transform=`translateZ(100px)`;
 })
-frame.addEventListener('mouseleave', e=>{
-tileSlice.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    portfolioPic.style.transform=`translateZ(0px)`;
-    quickInfo.style.transform=`translateZ(0px)`;
+
+cFrame.addEventListener('mouseleave', e=>{
+    contactInfoCard.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    socialSlice.style.transform=`translateZ(0px)`;
 })
 
 function pageNavigation() {
