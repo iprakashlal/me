@@ -300,6 +300,8 @@
             border: 0;
             background: #f8f0ee;
             box-shadow: 0 0 10px #00000078;
+            transform-style:preserve-3d;
+            transition:all 1s ease;
         }
 
         .cardZone {
@@ -389,11 +391,12 @@
             left: 0;
             right: 0;
             z-index: 1;
-            transition: 1s;
+            transition: all 1s ease;
             margin-top: 94vh;
             padding-left: 30px;
             padding-right: 30px;
             pointer-events: none !important;
+            perspective:400px;
         }
 
 
@@ -1459,9 +1462,9 @@ frame.addEventListener('mousemove', e=> {
 })
     
 cFrame.addEventListener('mousemove', e=> { 
-    var xAxis=((window.innerWidth/2)-e.pageX)/50; 
-    var yAxis=((window.innerHeight/2)-e.pageY)/50;
-    contactInfoCard.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg) translateZ(15px)`;   
+    var xAxis=((window.innerWidth/2)-e.pageX)/40; 
+    var yAxis=((window.innerHeight/2)-e.pageY)/40;
+    contactInfoCard.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg) translateZ(70px)`;   
     socialSlice.style.transform=`translateZ(100px)`;
 })
 frame.addEventListener('mouseleave', e=>{
