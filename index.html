@@ -1442,9 +1442,12 @@
     
 //     motion-effect
     var frame = document.querySelector('.heroSection');
+    var cFrame= document.querySelector('.contactSection');
     var tileSlice = document.getElementById('profilePic');
+    var socialSlice = document.getElementById('socialIconsZone');
     var portfolioPic = document.querySelector('.imageHolder');
      var quickInfo = document.querySelector('.activeNavZone');
+      var contactInfoCard = document.querySelector('.cardSection');
     
 
 frame.addEventListener('mousemove', e=> { 
@@ -1453,6 +1456,14 @@ frame.addEventListener('mousemove', e=> {
     tileSlice.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;   
     portfolioPic.style.transform=`translateZ(100px)`;
     quickInfo.style.transform=`translateZ(15px)`;
+})
+    
+cFrame.addEventListener('mousemove', e=> { 
+    var xAxis=((window.innerWidth/2)-e.pageX)/50; 
+    var yAxis=((window.innerHeight/2)-e.pageY)/50;
+    contactInfoCard.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;   
+    socialSlice.style.transform=`translateZ(100px)`;
+    contactInfoCard.style.transform=`translateZ(15px)`;
 })
 frame.addEventListener('mouseleave', e=>{
 tileSlice.style.transform = `rotateX(0deg) rotateY(0deg)`;
