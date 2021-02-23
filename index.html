@@ -1464,7 +1464,7 @@ frame.addEventListener('mousemove', e=> {
 cFrame.addEventListener('mousemove', e=> { 
     var xAxis=((window.innerWidth/2)-e.pageX)/40; 
     var yAxis=((window.innerHeight/2)-e.pageY)/40;
-    contactInfoCard.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg) translateZ(70px)`;   
+    contactInfoCard.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;   
     socialSlice.style.transform=`translateZ(100px)`;
 })
 frame.addEventListener('mouseleave', e=>{
